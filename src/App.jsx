@@ -2,11 +2,6 @@ import { useEffect } from 'react';
 import AppRouter from './routes/AppRouter';
 import { useThemeStore } from './store/themeStore';
 
-/**
- * App.jsx — FSAD-PS34
- * Root component. Syncs themeStore on mount and applies smooth scrolling.
- * Toaster is rendered inside AppRouter (inside BrowserRouter context).
- */
 export default function App() {
   const { isDark } = useThemeStore();
 

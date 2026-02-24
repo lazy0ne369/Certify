@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lazy0ne369.github.io/login",
+  "homepage": "https://lazy0ne369.github.io/Certify",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -4,7 +4,8 @@
  */
 
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+const Home = lazy(() => import('../pages/Home'));
 import { Toaster } from 'sonner';
 import { useAuthStore } from '../store/authStore';
 import ProtectedRoute from './ProtectedRoute';
@@ -60,7 +61,7 @@ function Protected({ role, children }) {
 // ── Router ────────────────────────────────────────────────────────────────────
 export default function AppRouter() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Toaster
                 position="top-right"
                 richColors
@@ -68,8 +69,11 @@ export default function AppRouter() {
             />
             <Suspense fallback={<PageLoader />}>
                 <Routes>
-                    {/* Root smart redirect */}
-                    <Route path="/" element={<RootRedirect />} />
+
+                    {/* Home page */}
+                    <Route path="/" element={<Home />} />
+                    {/* Smart redirect for legacy or direct links */}
+                    <Route path="/redirect" element={<RootRedirect />} />
 
                     {/* Public */}
                     <Route path="/login" element={<Login />} />
@@ -94,6 +98,6 @@ export default function AppRouter() {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Suspense>
-        </BrowserRouter>
+        </HashRouter>
     );
 }

@@ -64,7 +64,7 @@ export default function Navbar() {
                             <ShieldCheck className="w-4.5 h-4.5 text-white" strokeWidth={2.5} />
                         </div>
                         <span className="text-lg font-bold text-gray-900 dark:text-white tracking-tight">
-                            Cert<span className="text-indigo-600">Track</span>
+                            Certify
                         </span>
                     </Link>
                 </div>

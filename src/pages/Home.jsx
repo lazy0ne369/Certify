@@ -13,7 +13,7 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 11V7m0 4v4m0 0c0 1.657-2 3-4 3s-4-1.343-4-3 2-3 4-3 4 1.343 4 3z" />
           </svg>
         </div>
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-2 tracking-tight">Welcome to CertTrack</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-2 tracking-tight">Welcome to Certify</h1>
         <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">Your one-stop platform for managing and tracking certifications. Please login or go to your dashboard to get started.</p>
         <div className="flex gap-4 w-full justify-center">
           <Button size="md" variant="primary" onClick={() => navigate('/login')}>Login</Button>
